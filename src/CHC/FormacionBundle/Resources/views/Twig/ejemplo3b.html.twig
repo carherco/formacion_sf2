@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {{ include('CHCFormacionBundle::menu_categorias.html.twig',{ 'seleccionada': 'lacteos' }) }}
+    <div>{{ title }}</div>
+    
+    <div>
+        <ul>
+            {% for item in lista %}
+            <li>{{ item.nombre|upper }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    {{ include('CHCFormacionBundle::pie.html.twig') }}
+</body>
+
+</html>
+
+

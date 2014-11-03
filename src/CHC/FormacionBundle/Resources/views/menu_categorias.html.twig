@@ -1,0 +1,5 @@
+<ul>
+    <li {% if seleccionada == 'frutas' %}  style="color:red;" {% endif %}><a href="{{ path('chc_formacion_twig_ejemplo3a') }}">Frutas</a></li>
+    <li {% if seleccionada == 'lacteos' %} style="color:red;" {% endif %}><a href="{{ path('chc_formacion_twig_ejemplo3b') }}">Lácteos</a></li>
+    <li {% if seleccionada == 'pasta' %}   style="color:red;" {% endif %}><a href="{{ path('chc_formacion_twig_ejemplo3c') }}">Pasta</a></li>
+</ul>

@@ -1,0 +1,4 @@
+services:
+#    chc_formacion.example:
+#        class: CHC\FormacionBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,4 @@
+chc_formacion:
+    resource: "@CHCFormacionBundle/Resources/config/routing.yml"
+    prefix:   /
+

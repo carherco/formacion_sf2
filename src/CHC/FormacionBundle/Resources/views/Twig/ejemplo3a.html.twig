@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {{ include('CHCFormacionBundle::menu_categorias.html.twig',{ 'seleccionada': 'frutas' }) }}
+    <div>{{ title }}</div>
+    
+    <div>
+        <ul>
+            {% for item in lista|sort %}
+            <li>{{ item.nombre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    {{ include('CHCFormacionBundle::pie.html.twig') }}
+</body>
+
+</html>
+
+

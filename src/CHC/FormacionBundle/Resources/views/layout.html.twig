@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>La tienda de Carlos</title>{% endblock %}
+</head>
+
+<body>
+    {{ include('CHCFormacionBundle::menu_categorias4.html.twig',{ 'seleccionada': categoria }) }}
+    
+    {% block contenido %}    
+    <div>{{ title }}</div>
+    
+    <div>
+        <ul>
+            {% for item in lista %}
+            <li>{{ item.nombre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+    
+    {{ include('CHCFormacionBundle::pie.html.twig') }}
+</body>
+
+</html>

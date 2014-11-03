@@ -1,0 +1,39 @@
+#http://symfony.com/doc/current/book/routing.html
+#http://overapi.com/static/cs/symfony2-routing_en.pdf
+chc_formacion_routingyml_ejemplo1:
+    path:     /primer-ejemplo-de-routing
+    defaults: { _controller: CHCFormacionBundle:RoutingYML:ejemplo1 }
+    
+chc_formacion_routingyml_ejemplo2:
+    path:     /ejemplo2/routing
+    defaults: { _controller: CHCFormacionBundle:RoutingYML:ejemplo2 }
+    
+chc_formacion_routingyml_ejemplo3:
+    path:     /routing-yml/ejemplo3/{nombre}
+    defaults: { _controller: CHCFormacionBundle:RoutingYML:ejemplo3 }
+    
+chc_formacion_routingyml_ejemplo4:
+    path:      /routing-yml/parametro-opcional/{param}
+    defaults:  { _controller: CHCFormacionBundle:RoutingYML:ejemplo4, param: ValorPorDefecto }
+    
+chc_formacion_routingyml_ejemplo5:
+    path:      /routing-yml/parametro-opcional-integer/{param}
+    defaults:  { _controller: CHCFormacionBundle:RoutingYML:ejemplo5, param: 1 }
+    requirements:
+        param:  \d+
+        
+chc_formacion_routingyml_ejemplo6:
+    path:      /routing-yml/parametro-opcional-integer/{param}
+    defaults:  { _controller: CHCFormacionBundle:RoutingYML:ejemplo6, param: 1 }
+
+
+
+chc_formacion_routing_anotaciones:
+    resource: "@CHCFormacionBundle/Controller/RoutingAnotacionesController.php"
+    type:     annotation
+    prefix:   /routing-anotaciones
+    
+chc_formacion_twig:
+    resource: "@CHCFormacionBundle/Controller/TwigController.php"
+    type:     annotation
+    prefix:   /twig

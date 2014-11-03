@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div>Bienvenido al segundo ejemplo de twig</div>
+    
+    <div>
+        <ul>
+            {% for item in lista %}
+            <li>{{ item.nombre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
+
+
