@@ -37,3 +37,8 @@ chc_formacion_twig:
     resource: "@CHCFormacionBundle/Controller/TwigController.php"
     type:     annotation
     prefix:   /twig
+    
+chc_formacion_formularios:
+    resource: "@CHCFormacionBundle/Controller/FormulariosController.php"
+    type:     annotation
+    prefix:   /formularios
