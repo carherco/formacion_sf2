@@ -1,3 +1,10 @@
+login:
+    path:     /login
+    defaults: { _controller: CHCFormacionBundle:Security:login }
+    
+login_check:
+    path: /twig/login_check
+
 chc_formacion:
     resource: "@CHCFormacionBundle/Resources/config/routing.yml"
     prefix:   /

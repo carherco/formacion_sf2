@@ -2,3 +2,7 @@ services:
 #    chc_formacion.example:
 #        class: CHC\FormacionBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    ws_authenticator:
+        class:     CHC\FormacionBundle\Security\WSAuthenticator
+        arguments: ["@security.encoder_factory"]

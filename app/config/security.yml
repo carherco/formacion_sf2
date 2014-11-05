@@ -7,6 +7,20 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+            
+        private_area:
+            pattern:    ^/twig
+            simple_form:
+                authenticator: ws_authenticator
+                login_path: /login
+                check_path: /twig/login_check
+                
+    access_control:
+        - { path: ^/twig/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/twig, role: IS_AUTHENTICATED_FULLY } 
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/, role: IS_AUTHENTICATED_FULLY } 
 
-        default:
-            anonymous: ~
+        
